@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <style type="text/css">
+      .embeddedServiceLiveAgentStateChatAvatar .avatar {
+        display: flex;
+      }
+
+      .embeddedServiceSidebarButton {
+        background-color: #393434 !important;
+      }
+
+      .embeddedServiceSidebarButton.uiButton--inverse {
+        background: none !important;
+      }
+
+      .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #393434 !important;
+      }
+
+      .chasitor.chat-content[CLWCP-lwcchatpack_lwcchatpack] {
+        background-color: #393434 !important;
+      }
+
+      .embeddedServiceLiveAgentStateChatAvatar.isLightningOutContext
+        .agentIconColor0 {
+        background-color: #393434 !important;
+      }
+
+      .embeddedServiceSidebarMinimizedDefaultUI {
+        background-color: #393434 !important;
+        border: none !important;
+      }
+
+      .embeddedServiceHelpButton .embeddedServiceIcon {
+        display: inherit !important;
+      }
+
+      embeddedservice-chat-header.chatHeaderBranding {
+        background-color: #393434 !important;
+      }
+
+      .sidebarHeader img {
+        max-width: none !important;
+      }
+
+      .sidebarHeader h2 {
+        color: transparent;
+        user-select: none !important;
+      }
+
+      .sidebarHeader button {
+        padding: 1px 6px;
+        margin: 0;
+      }
+
+      body:has(.dockableContainer.showDockableContainer)
+        .embeddedServiceSidebar.modalContainer {
+        z-index: 9999999;
+      }
+
+      @media only screen and (min-width: 48em) {
+        .embeddedServiceHelpButton .helpButton .uiButton,
+        .embeddedServiceHelpButton .helpButton .uiButton::before {
+          border-radius: 23px !important;
+        }
+      }
+
+      @media only screen and (min-width: 600px) {
+        .embeddedServiceSidebar.layout-docked .dockableContainer {
+          height: 565px !important;
+          width: 400px !important;
+          max-height: 565px !important;
+          bottom: 0 !important;
+          position: fixed;
+          left: auto;
+          right: 20px;
+          margin: 0;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI .minimizedImage img {
+          opacity: 0% !important;
+          width: 0px !important;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI .minimizedImage .uiImage {
+          width: 0px !important;
+          height: auto !important;
+          border-radius: 0% !important;
+        }
+
+        .embeddedServiceSidebar.layout-docked .dockableContainer {
+          right: 84px !important;
+        }
+
+        .embeddedServiceHelpButton .helpButton .uiButton {
+          text-transform: none !important;
+          font-size: 0.875rem !important;
+          padding: 0 1.25rem !important;
+          min-width: 10rem !important;
+        }
+
+        .embeddedServiceHelpButton .uiButton .helpButtonLabel .message {
+          padding: 0;
+          font-size: 0.875rem;
+          text-transform: none;
+          border: none;
+          outline: none;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI.helpButton .messageContent {
+          left: -5px;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI .messageContent {
+          margin: 8px;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI .embeddedServiceIcon {
+          margin-right: 4px;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI.sidebarHeader {
+          border-radius: 23px !important;
+          height: 2.875rem;
+          bottom: 3rem !important;
+          min-width: 10rem;
+          max-width: 10rem;
+        }
+
+        .embeddedServiceIcon.x-small svg {
+          width: 17.5px !important;
+          height: auto;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        .embeddedServiceSidebar.layout-docked .dockableContainer {
+          height: 565px !important;
+          max-width: calc(100% - 24px) !important;
+          width: 400px;
+          max-height: 565px !important;
+          bottom: 0 !important;
+          position: fixed !important;
+          right: 0 !important;
+          left: auto;
+          margin-left: 12px !important;
+          margin-right: 12px !important;
+          margin-bottom: 0;
+        }
+
+        .embeddedServiceHelpButton .helpButton {
+          bottom: 25px !important;
+          right: 30px !important;
+          width: 50px !important;
+        }
+
+        .embeddedServiceHelpButton .uiButton {
+          width: 50px !important;
+          height: 50px !important;
+          min-width: 45px !important;
+          border-radius: 30px !important;
+          box-shadow: none !important;
+        }
+
+        .embeddedServiceHelpButton .embeddedServiceIcon {
+          font-size: 2em !important;
+          margin-left: -5.5px;
+          display: inherit !important;
+          transform: scaleX(-1);
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI .embeddedServiceIcon {
+          font-size: 2em !important;
+          height: 30.8px !important;
+          width: 30.8px !important;
+          margin-left: 8px;
+          display: inherit !important;
+          transform: scaleX(-1);
+        }
+
+        .embeddedServiceHelpButton .helpButton .uiButton {
+          background-color: #393434 !important;
+          text-transform: none !important;
+          padding: 0 15px !important;
+          border-radius: 50% !important;
+        }
+
+        .embeddedServiceHelpButton .embeddedServiceIcon::before {
+          font-size: 1.1em !important;
+        }
+
+        .embeddedServiceHelpButton .uiButton .helpButtonLabel .message {
+          padding: 0px;
+          font-size: 14px;
+          text-transform: none;
+          border: none !important;
+          outline: none !important;
+        }
+
+        .embeddedServiceHelpButton .helpButton .helpButtonEnabled:hover::before,
+        .embeddedServiceHelpButton
+          .helpButton
+          .helpButtonEnabled:focus::before {
+          border-radius: 30px !important;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI {
+          min-width: 45px !important;
+          border-radius: 50% !important;
+          max-width: 11em;
+          text-transform: none !important;
+          padding: 0 15px !important;
+          background-color: #393434 !important;
+          border-color: #393434 !important;
+          box-shadow: none !important;
+          bottom: 25px !important;
+          right: 30px !important;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI.sidebarHeader {
+          bottom: 20px;
+          width: 50px !important;
+          height: 50px !important;
+          min-width: 45px !important;
+          border-radius: 50% !important;
+          background-color: #393434 !important;
+          border-color: #393434 !important;
+          border: none !important;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI:not(.waiting) .minimizedText {
+          white-space: nowrap;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI:not(.helpButton)
+          .messageContent {
+          flex-direction: row !important;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI .minimizedText > .message {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: inherit;
+          margin: inherit;
+          font-weight: 100;
+          padding: inherit;
+          text-transform: initial;
+          width: 30px;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI .messageContent {
+          min-width: 30px !important;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI
+          .sidebarHeader
+          .helpButton
+          .minimizedContainer {
+          max-width: 60px !important;
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI .minimizedImage {
+          margin-left: 0px !important;
+          transform: scaleX(-1);
+        }
+
+        .embeddedServiceSidebarMinimizedDefaultUI .minimizedImage .uiImage,
+        .embeddedServiceSidebarMinimizedDefaultUI .minimizedImage img {
+          border-radius: 0% !important;
+          font-size: 28px !important;
+          height: 30.8px !important;
+          width: 30.8px !important;
+          display: inherit !important;
+          content: url('https://vfconsumercareorg2--norachat--c.sandbox.vf.force.com/servlet/servlet.ImageServer?id=015VB0000000uYTYAY&oid=00DDG000009TCKL');
+        }
+
+        .embeddedServiceIcon.x-small svg {
+          width: 35px !important;
+          height: auto !important;
+        }
+      }
+
+      /* DACT added */
+      .embeddedServiceSidebarFeature a {
+        color: rgb(0, 0, 238);
+        text-decoration: underline;
+      }
+
+      @media screen and (max-width: 439px) {
+        .sidebarMaximized .showDockableContainer {
+          right: auto !important;
+          width: 100% !important;
+        }
+      }
+
+      /* END DACT added */
+    </style>
+  </head>
+
+  <body>
+    <script
+      type="text/javascript"
+      src="https://service.force.com/embeddedservice/5.0/esw.min.js"
+    ></script>
+    <script type="text/javascript">
+      var initESW = function (gslbBaseURL) {
+        var ChatBrand = 'TBL';
+        var ChatLanguage = 'fr';
+        var ChatOrigin = 'fr';
+        var ChatChannel = 'Salesforce Bot';
+        var CustomerPageType = 'Contact Us';
+        var ChatbuttonId = '573Dn000000dH6C';
+        embedded_svc.settings.smallCompanyLogoImgURL =
+          'https://vfconsumercareorg2.my.salesforce.com/servlet/servlet.ImageServer?id=015Dn000000vUO5&oid=00DDn00000CYzru';
+        embedded_svc.settings.avatarImgURL =
+          'https://vfconsumercareorg2.my.salesforce.com/servlet/servlet.ImageServer?id=015Dn000000vUO1&oid=00DDn00000CYzru';
+
+        embedded_svc.settings.displayHelpButton = true;
+        embedded_svc.settings.language = ChatLanguage;
+        embedded_svc.settings.defaultMinimizedText = 'Clavardag';
+
+        //START - message that appears after maximizing the chat, it was not possible to introduce it as a variable
+        var textInserted = false;
+        embedded_svc.addEventHandler('afterMaximize', function (data) {
+          console.log('afterMaximize event was fired.');
+          console.log('state =' + textInserted);
+          if (!textInserted) {
+            textInserted = true;
+            var policyDiv = document.createElement('div');
+            policyDiv.style.color = 'black';
+            policyDiv.style.padding = '5px';
+            policyDiv.appendChild(
+              document.createTextNode(
+                'Veuillez noter que les sessions de message peuvent être enregistrées et sont soumises à notre '
+              )
+            );
+            const link = document.createElement('a');
+            link.href =
+              'https://www.timberland.ca/fr-ca/protection-des-renseignements-personnels?icid=helpcenter';
+            link.innerText = 'politique de confidentialité.';
+            policyDiv.appendChild(link);
+            var policyBox = document.querySelector(
+              'div.buttonWrapper.embeddedServiceSidebarForm'
+            );
+            policyBox.insertBefore(policyDiv, policyBox.childNodes[0]);
+          }
+        });
+        embedded_svc.addEventHandler('afterDestroy', function (data) {
+          console.log('afterDestroy event was fired.');
+          textInserted = false;
+        });
+        //END - message that appears after maximizing the chat, it was not possible to introduce it as a variable
+
+        embedded_svc.settings.prepopulatedPrechatFields = {
+          FirstName: 'Guest',
+          LastName: 'Guest',
+        };
+
+        embedded_svc.settings.extraPrechatFormDetails = [
+          { label: 'Adresse e-mail', transcriptFields: ['Email__c'] },
+          { label: 'Prénom', transcriptFields: ['VF_First_Name__c'] },
+          { label: 'Nom', transcriptFields: ['VF_Last_Name__c'] },
+          { label: 'Sujet du Chat', transcriptFields: ['VF_Subject__c'] },
+          { label: 'Brand', value: ChatBrand, transcriptFields: ['Brand__c'] },
+          {
+            label: 'Channel',
+            value: ChatChannel,
+            transcriptFields: ['Channel__c'],
+          },
+          {
+            label: 'Visited Page',
+            value: CustomerPageType,
+            transcriptFields: ['Visited_Page__c'],
+          },
+          {
+            label: 'Chat Origin',
+            value: ChatOrigin,
+            transcriptFields: ['Chat_Origin__c'],
+          },
+          { label: 'ChatLanguage', value: ChatLanguage },
+        ];
+        embedded_svc.settings.extraPrechatInfo = [
+          {
+            entityFieldMaps: [
+              {
+                isExactMatch: true,
+                fieldName: 'PersonEmail',
+                doCreate: false,
+                doFind: true,
+                label: 'Email',
+              },
+              {
+                isExactMatch: true,
+                fieldName: 'VF_Brand__c',
+                doCreate: false,
+                doFind: true,
+                label: 'Brand',
+              },
+            ],
+            entityName: 'Account',
+            showOnCreate: true,
+            saveToTranscript: 'AccountId',
+          },
+          {
+            entityFieldMaps: [
+              {
+                doCreate: false,
+                doFind: false,
+                fieldName: 'LastName',
+                isExactMatch: true,
+                label: 'Last Name',
+              },
+              {
+                doCreate: false,
+                doFind: false,
+                fieldName: 'FirstName',
+                isExactMatch: true,
+                label: 'First Name',
+              },
+            ],
+            entityName: 'Contact',
+            showOnCreate: false,
+            saveToTranscript: '',
+          },
+          {
+            entityName: 'Case',
+            showOnCreate: false,
+            saveToTranscript: '',
+            entityFieldMaps: [
+              {
+                doCreate: false,
+                doFind: false,
+                fieldName: 'Email__c',
+                isExactMatch: true,
+                label: 'Email',
+              },
+            ],
+          },
+        ];
+        //Sets the auto-population of pre-chat form fields
+        //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+        //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+        embedded_svc.settings.widgetWidth = '400px';
+        embedded_svc.settings.widgetHeight = '565px';
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        embedded_svc.init(
+          'https://vfconsumercareorg2.my.salesforce.com',
+          'https://vfconsumercareorg2.my.salesforce-sites.com/liveAgentSetupFlow',
+          gslbBaseURL,
+          '00DDn00000CYzru',
+          'Embedded_Chat',
+          {
+            baseLiveAgentContentURL:
+              'https://c.la1-c1-ia6.salesforceliveagent.com/content',
+            deploymentId: '572Dn000000dH8y',
+            buttonId: '573Dn000000dH6C',
+            baseLiveAgentURL:
+              'https://d.la1-c1-ia6.salesforceliveagent.com/chat',
+            eswLiveAgentDevName:
+              'EmbeddedServiceLiveAgent_Parent04IDn000000cCxRMAU_189f58e6ab2',
+            isOfflineSupportEnabled: false,
+          }
+        );
+      };
+
+      if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute(
+          'src',
+          'https://vfconsumercareorg2.my.salesforce.com/embeddedservice/5.0/esw.min.js'
+        );
+        s.onload = function () {
+          initESW(null);
+        };
+        document.body.appendChild(s);
+      } else {
+        initESW('https://service.force.com');
+      }
+    </script>
+  </body>
+</html>
